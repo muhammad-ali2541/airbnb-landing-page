@@ -25,7 +25,7 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.7 }}
           className="text-sand-300 tracking-[0.3em] uppercase text-xs font-body font-light mb-6"
         >
-          Tuscany Hills, Italy
+          Hilltop Wellness Retreat
         </motion.p>
 
         {/* Headline */}
