@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sand-50: #faf8f5;
+  --sand-100: #f5f0e8;
+  --sand-200: #ede3d1;
+  --sand-400: #cdb590;
+  --sand-600: #a07d55;
+  --charcoal-800: #2a2522;
+  --charcoal-900: #1a1614;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  background-color: var(--sand-50);
+}
+
+.font-display {
+  font-family: var(--font-display), 'Cormorant Garamond', serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--sand-100); }
+::-webkit-scrollbar-thumb { background: var(--sand-400); border-radius: 3px; }
+
+/* Section reveal utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
