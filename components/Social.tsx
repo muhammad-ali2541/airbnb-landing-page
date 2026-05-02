@@ -4,12 +4,14 @@ import { motion, useInView } from "framer-motion";
 import { Instagram, ChevronLeft, ChevronRight, Facebook } from "lucide-react";
 
 const igImages = [
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80",
-  "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80",
-  "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=80",
-  "https://images.unsplash.com/photo-1599427303058-f04cbcf4756f?w=400&q=80",
-  "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=80",
-  "https://images.unsplash.com/photo-1586105449897-20b5efeb3233?w=400&q=80",
+  "/36.png",
+  "/20.png",
+  "/21.png",
+  "/13.png",
+  "/17.png",
+  "/18.png",
+  "/12.png",
+  "/8.png",
 ];
 
 const GREEN = "#5C6B50";
@@ -183,7 +185,7 @@ export default function Social() {
               {repeated.map((url, i) => (
                 <a
                   key={i}
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/hilltop_haven_vacation?igsh=MXd5eWc4eXR1bGprbA=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative overflow-hidden group rounded-2xl block flex-shrink-0"

@@ -4,72 +4,62 @@ import { motion, useInView } from "framer-motion";
 
 const images = [
   // Initial 5 — first image is the hero span (large)
-  { url: "/1.png",  alt: "Hilltop Haven",    span: "lg:col-span-2 lg:row-span-2" },
-  { url: "/2.png",  alt: "Living Area",       span: "" },
-  { url: "/3.png",  alt: "Master Bedroom",    span: "" },
-  { url: "/4.png",  alt: "Kitchen",           span: "" },
-  { url: "/5.png",  alt: "Terrace",           span: "" },
+  { url: "/29.png", alt: "Exterior", span: "lg:col-span-2 lg:row-span-2" },
+  { url: "/46.png", alt: "Living Room", span: "" },
+  { url: "/50.png", alt: "Kitchen", span: "" },
+  { url: "/40.png", alt: "Bedroom", span: "" },
+  { url: "/26.png", alt: "Bathroom", span: "" },
 
   // View More batch 1
-  { url: "/6.png",  alt: "Pool View",         span: "" },
-  { url: "/7.png",  alt: "Bathroom",          span: "" },
-  { url: "/8.png",  alt: "Dining Area",       span: "" },
-  { url: "/9.png",  alt: "Outdoor Seating",   span: "" },
-  { url: "/10.png", alt: "Garden View",       span: "" },
-  { url: "/11.png", alt: "Balcony Sunset",    span: "" },
+  { url: "/33.png", alt: "Patio", span: "" },
+  { url: "/23.png", alt: "Deck 1", span: "" },
+  { url: "/45.png", alt: "Deck 2", span: "" },
+  { url: "/48.png", alt: "Laundry Area", span: "" },
+  { url: "/24.png", alt: "Hot Tub", span: "" },
+  { url: "/49.png", alt: "Movie theater", span: "" },
 
   // View More batch 2
-  { url: "/12.png", alt: "Cozy Lounge",       span: "" },
-  { url: "/13.png", alt: "Scenic View",       span: "" },
-  { url: "/14.png", alt: "Elegant Interior",  span: "" },
-  { url: "/15.png", alt: "Private Entrance",  span: "" },
-  { url: "/16.png", alt: "Nature Walk",       span: "" },
-  { url: "/17.png", alt: "Fireplace",         span: "" },
+  { url: "/14.png", alt: "Deck 1", span: "" },
+  { url: "/32.png", alt: "Exterior", span: "" },
+  { url: "/9.png", alt: "Exterior", span: "" },
+  { url: "/16.png", alt: "Exterior", span: "" },
 
   // View More batch 3
-  { url: "/18.png", alt: "Wine Corner",       span: "" },
-  { url: "/19.png", alt: "Reading Nook",      span: "" },
-  { url: "/20.png", alt: "Hillside View",     span: "" },
-  { url: "/21.png", alt: "Guest Bedroom",     span: "" },
-  { url: "/22.png", alt: "Morning Light",     span: "" },
-  { url: "/23.png", alt: "Patio Chairs",      span: "" },
+  { url: "/43.png", alt: "Living Room", span: "" },
+  { url: "/35.png", alt: "Living Room", span: "" },
+  { url: "/22.png", alt: "Living Room", span: "" },
+  { url: "/34.png", alt: "Living Room", span: "" },
+  { url: "/22.png", alt: "Living Room", span: "" },
 
   // View More batch 4
-  { url: "/24.png", alt: "Sunset Deck",       span: "" },
-  { url: "/25.png", alt: "Vineyard View",     span: "" },
-  { url: "/26.png", alt: "Stone Pathway",     span: "" },
-  { url: "/27.png", alt: "Outdoor Dining",    span: "" },
-  { url: "/28.png", alt: "Pool Deck",         span: "" },
-  { url: "/29.png", alt: "Garden Path",       span: "" },
+  { url: "/7.png", alt: "Kitchen", span: "" },
+  { url: "/11.png", alt: "Kitchen", span: "" },
+  { url: "/25.png", alt: "Kitchen", span: "" },
+  { url: "/27.png", alt: "Kitchen", span: "" },
+  { url: "/38.png", alt: "Kitchen", span: "" },
+  { url: "/41.png", alt: "Bedroom 2", span: "" },
 
   // View More batch 5
-  { url: "/30.png", alt: "Mountain View",     span: "" },
-  { url: "/31.png", alt: "Spa Bath",          span: "" },
-  { url: "/32.png", alt: "Luxury Linens",     span: "" },
-  { url: "/33.png", alt: "Open Kitchen",      span: "" },
-  { url: "/34.png", alt: "Warm Living Room",  span: "" },
-  { url: "/35.png", alt: "Evening Ambience",  span: "" },
+  { url: "/1.png", alt: "Bathroom", span: "" },
+  { url: "/5.png", alt: "Deck 1", span: "" },
+  { url: "/3.png", alt: "Deck 1", span: "" },
+  { url: "/15.png", alt: "Deck 2", span: "" },
+  { url: "/28.png", alt: "Deck 2", span: "" },
+  { url: "/37.png", alt: "Deck 2", span: "" },
 
   // View More batch 6
-  { url: "/36.png", alt: "Rolling Hills",     span: "" },
-  { url: "/37.png", alt: "Rustic Details",    span: "" },
-  { url: "/38.png", alt: "Herb Garden",       span: "" },
-  { url: "/39.png", alt: "Window Light",      span: "" },
-  { url: "/40.png", alt: "Front Entrance",    span: "" },
-  { url: "/41.png", alt: "Canopy Bed",        span: "" },
+  { url: "/2.png", alt: "Deck 2", span: "" },
+  { url: "/19.png", alt: "Deck 2", span: "" },
+  { url: "/47.png", alt: "Hot Tub", span: "" },
+  { url: "/10.png", alt: "Hot Tub", span: "" },
+  { url: "/44.png", alt: "Hot Tub", span: "" },
+  { url: "/30.png", alt: "Movie theater", span: "" },
 
   // View More batch 7
-  { url: "/42.png", alt: "Driveway",          span: "" },
-  { url: "/43.png", alt: "Oak Trees",         span: "" },
-  { url: "/44.png", alt: "Hammock Spot",      span: "" },
-  { url: "/45.png", alt: "Night Sky",         span: "" },
-  { url: "/46.png", alt: "Coffee Nook",       span: "" },
-  { url: "/47.png", alt: "Soaking Tub",       span: "" },
+  { url: "/39.png", alt: "Movie theater", span: "" },
+  { url: "/31.png", alt: "Movie theater", span: "" },
+  { url: "/6.png", alt: "Movie theater", span: "" },
 
-  // View More batch 8
-  { url: "/48.png", alt: "Wildflower Field",  span: "" },
-  { url: "/49.png", alt: "Treeline Sunset",   span: "" },
-  { url: "/50.png", alt: "Hilltop Vista",     span: "" },
 ];
 
 const INITIAL_COUNT = 5;
