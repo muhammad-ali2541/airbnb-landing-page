@@ -15,8 +15,10 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Villa Serenova — Luxury Retreat',
-  description: 'A secluded luxury villa nestled in the hills. Book your perfect escape today.',
+  title: 'Hilltop Wellness Retreat | Sauna + Hot Tub',
+  description:
+    'Escape to a peaceful Forestville retreat with mountain views, private hot tub, outdoor infrared sauna, fast WiFi, and a relaxing Sonoma County getaway experience.',
+
 }
 
 export default function RootLayout({

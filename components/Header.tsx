@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const navLinks = ["About", "Gallery", "Amenities", "Reviews", "Contact"];
+const navLinks = ["About", "Gallery", "Amenities", "Reviews", "FAQ", "Contact"];
 
 const BG = "#E8EDE5";
 const GREEN = "#5C6B50";
