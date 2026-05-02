@@ -3,90 +3,73 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const images = [
-  {
-    url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
-    alt: "Pool View",
-    span: "lg:col-span-2 lg:row-span-2",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
-    alt: "Master Bedroom",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=800&q=80",
-    alt: "Bathroom",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
-    alt: "Kitchen",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-    alt: "Terrace",
-    span: "",
-  },
+  // Initial 5 — first image is the hero span (large)
+  { url: "/1.png",  alt: "Hilltop Haven",    span: "lg:col-span-2 lg:row-span-2" },
+  { url: "/2.png",  alt: "Living Area",       span: "" },
+  { url: "/3.png",  alt: "Master Bedroom",    span: "" },
+  { url: "/4.png",  alt: "Kitchen",           span: "" },
+  { url: "/5.png",  alt: "Terrace",           span: "" },
 
-  // Extra images for View More
-  {
-    url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
-    alt: "Living Room",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
-    alt: "Dining Area",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80",
-    alt: "Outdoor Seating",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80",
-    alt: "Luxury Bedroom",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80",
-    alt: "Garden View",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80",
-    alt: "Balcony Sunset",
-    span: "",
-  },
+  // View More batch 1
+  { url: "/6.png",  alt: "Pool View",         span: "" },
+  { url: "/7.png",  alt: "Bathroom",          span: "" },
+  { url: "/8.png",  alt: "Dining Area",       span: "" },
+  { url: "/9.png",  alt: "Outdoor Seating",   span: "" },
+  { url: "/10.png", alt: "Garden View",       span: "" },
+  { url: "/11.png", alt: "Balcony Sunset",    span: "" },
 
-  // More images for second View More
-  {
-    url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80",
-    alt: "Cozy Lounge",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
-    alt: "Elegant Interior",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
-    alt: "Relaxing Patio",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80",
-    alt: "Private Entrance",
-    span: "",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80",
-    alt: "Nature Walk",
-    span: "",
-  },
+  // View More batch 2
+  { url: "/12.png", alt: "Cozy Lounge",       span: "" },
+  { url: "/13.png", alt: "Scenic View",       span: "" },
+  { url: "/14.png", alt: "Elegant Interior",  span: "" },
+  { url: "/15.png", alt: "Private Entrance",  span: "" },
+  { url: "/16.png", alt: "Nature Walk",       span: "" },
+  { url: "/17.png", alt: "Fireplace",         span: "" },
+
+  // View More batch 3
+  { url: "/18.png", alt: "Wine Corner",       span: "" },
+  { url: "/19.png", alt: "Reading Nook",      span: "" },
+  { url: "/20.png", alt: "Hillside View",     span: "" },
+  { url: "/21.png", alt: "Guest Bedroom",     span: "" },
+  { url: "/22.png", alt: "Morning Light",     span: "" },
+  { url: "/23.png", alt: "Patio Chairs",      span: "" },
+
+  // View More batch 4
+  { url: "/24.png", alt: "Sunset Deck",       span: "" },
+  { url: "/25.png", alt: "Vineyard View",     span: "" },
+  { url: "/26.png", alt: "Stone Pathway",     span: "" },
+  { url: "/27.png", alt: "Outdoor Dining",    span: "" },
+  { url: "/28.png", alt: "Pool Deck",         span: "" },
+  { url: "/29.png", alt: "Garden Path",       span: "" },
+
+  // View More batch 5
+  { url: "/30.png", alt: "Mountain View",     span: "" },
+  { url: "/31.png", alt: "Spa Bath",          span: "" },
+  { url: "/32.png", alt: "Luxury Linens",     span: "" },
+  { url: "/33.png", alt: "Open Kitchen",      span: "" },
+  { url: "/34.png", alt: "Warm Living Room",  span: "" },
+  { url: "/35.png", alt: "Evening Ambience",  span: "" },
+
+  // View More batch 6
+  { url: "/36.png", alt: "Rolling Hills",     span: "" },
+  { url: "/37.png", alt: "Rustic Details",    span: "" },
+  { url: "/38.png", alt: "Herb Garden",       span: "" },
+  { url: "/39.png", alt: "Window Light",      span: "" },
+  { url: "/40.png", alt: "Front Entrance",    span: "" },
+  { url: "/41.png", alt: "Canopy Bed",        span: "" },
+
+  // View More batch 7
+  { url: "/42.png", alt: "Driveway",          span: "" },
+  { url: "/43.png", alt: "Oak Trees",         span: "" },
+  { url: "/44.png", alt: "Hammock Spot",      span: "" },
+  { url: "/45.png", alt: "Night Sky",         span: "" },
+  { url: "/46.png", alt: "Coffee Nook",       span: "" },
+  { url: "/47.png", alt: "Soaking Tub",       span: "" },
+
+  // View More batch 8
+  { url: "/48.png", alt: "Wildflower Field",  span: "" },
+  { url: "/49.png", alt: "Treeline Sunset",   span: "" },
+  { url: "/50.png", alt: "Hilltop Vista",     span: "" },
 ];
 
 const INITIAL_COUNT = 5;
