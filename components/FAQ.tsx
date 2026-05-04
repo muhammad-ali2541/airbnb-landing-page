@@ -8,36 +8,73 @@ const DARK = "#1F1F1F";
 
 const faqs = [
   {
-    q: "What is the check-in and check-out time?",
-    a: "Check-in is from 3:00 PM onwards and check-out is by 11:00 AM. Early check-in or late check-out may be arranged upon request, subject to availability. Please message us in advance and we'll do our best to accommodate.",
+    q: "What makes this property a 'Wellness Retreat'?",
+    a: "We’ve designed the home to be a sanctuary for restoration. Your stay includes exclusive access to a private 3-person outdoor infrared sauna, a deep-soak hot tub, and an outdoor shower, all situated on a peaceful deck overlooking the forested hills of Forestville.",
   },
   {
-    q: "Is the property suitable for children?",
-    a: "Hilltop Haven warmly welcomes families with children. The property features open outdoor areas and a private pool — please note the pool is unfenced, so supervision of young children is required at all times. Pack n' play and a high chair are available on request.",
+    q: "Is the property suitable for remote work?",
+    a: "Absolutely. We provide fast Wi-Fi (60 Mbps), making it an ideal spot for those who need a quiet, focused environment to work while remaining close to nature.",
   },
   {
-    q: "Are pets allowed?",
-    a: "We love animals but unfortunately pets are not permitted at Hilltop Haven. This policy helps us maintain the property to the highest standard for all guests.",
+    q: "How do I check in?",
+    a: (
+      <>
+        <p>
+          We use a smartlock system for a seamless self-check-in experience. You
+          will receive your unique access code prior to arrival.
+        </p>
+        <ul className="list-disc pl-5 mt-3 space-y-1">
+          <li>Check-in: 4:00 PM</li>
+          <li>Check-out: By 11:00 AM</li>
+        </ul>
+      </>
+    ),
   },
   {
-    q: "Is there parking available on site?",
-    a: "Yes, private off-street parking is available for up to two vehicles at no extra charge. The driveway is easily accessible and well-lit.",
+    q: "Where can I park?",
+    a: "The property includes two dedicated parking spaces on the premises for your convenience.",
   },
   {
-    q: "How far is the property from Sonoma town?",
-    a: "Hilltop Haven is approximately 12 minutes by car from Sonoma Plaza — close enough for easy access to world-class restaurants, tasting rooms, and shops, yet secluded enough to feel completely removed from the everyday.",
+    q: "How many guests can the home accommodate?",
+    a: "The home comfortably sleeps up to 4 guests. There are two bedrooms: one with a queen bed and a second 'bunk room' featuring a twin-over-full bunk bed.",
   },
   {
-    q: "Is the pool heated?",
-    a: "Yes, the pool is solar-heated and typically maintains a comfortable temperature throughout the spring, summer, and fall seasons. Please note that pool heating is subject to weather conditions.",
+    q: "What is the kitchen like?",
+    a: "The kitchen is fully stocked with the essentials you'll need to prepare meals during your stay, allowing you to enjoy a quiet night in after a day of exploring local vineyards.",
   },
   {
-    q: "What is the cancellation policy?",
-    a: "We offer a flexible cancellation policy — a full refund is available if you cancel at least 5 days before check-in. Cancellations made within 5 days of check-in are non-refundable. Full details are listed on our Airbnb booking page.",
+    q: "Are there any specific 'Do’s and Don’ts'?",
+    a: "To maintain the peaceful atmosphere of our neighborhood, we ask that you respect our maximum occupancy of 4 guests. Additionally, please note that the fire table on the deck is currently not in service and should not be used.",
   },
   {
-    q: "Is the property accessible via public transport?",
-    a: "The property is best reached by car. We recommend renting a vehicle to fully explore the Sonoma Valley wine country at your own pace. Rideshare services are available from nearby towns.",
+    q: "What safety features are on-site?",
+    a: "For your peace of mind, the property is equipped with exterior security cameras. Please be aware that the hot tub area is not gated or locked.",
+  },
+  {
+    q: "What is there to do nearby?",
+    a: (
+      <>
+        <p>
+          You are perfectly positioned to enjoy the best of Sonoma County. Local
+          favorites include:
+        </p>
+        <ul className="list-disc pl-5 mt-3 space-y-1">
+          <li>
+            Nature: Armstrong Redwoods State Natural Reserve and the Russian
+            River
+          </li>
+          <li>Wine: Numerous world-class vineyards within a short drive</li>
+          <li>
+            Dining: Charming local spots in downtown Forestville and nearby
+            Guerneville
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    q: "Is the home family-friendly?",
+    a: "Yes, the home is well-suited for small families. The bunk room layout is ideal for children, and the peaceful surroundings provide a safe and relaxing environment. However, guests should supervise children around outdoor areas like the deck, hot tub, and sauna.",
   },
 ];
 
@@ -45,7 +82,7 @@ function FAQItem({
   faq,
   index,
 }: {
-  faq: { q: string; a: string };
+  faq: { q: string; a: React.ReactNode };
   index: number;
 }) {
   const [open, setOpen] = useState(false);
@@ -85,11 +122,11 @@ function FAQItem({
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             className="overflow-hidden">
-            <p
+            <div
               className="pb-6 text-sm font-light leading-relaxed pr-14"
               style={{ color: `${DARK}99` }}>
               {faq.a}
-            </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
