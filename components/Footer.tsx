@@ -125,14 +125,14 @@ export default function Footer() {
               Contact
             </p>
             <ul className="space-y-3">
-              <li
+              {/* <li
                 className="flex items-center gap-3 text-sm font-light"
                 style={{ color: DARK_GREEN }}>
                 <Mail size={14} strokeWidth={1.5} />
                 <a href="mailto:elipoint@gmail.com" className="hover:underline">
                   elipoint@gmail.com
                 </a>
-              </li>
+              </li> */}
 
               <li
                 className="flex items-center gap-3 text-sm font-light"

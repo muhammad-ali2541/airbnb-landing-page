@@ -11,7 +11,7 @@ export default function FinalCTA() {
       className="relative py-36 overflow-hidden"
       ref={ref}
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80')`,
+        backgroundImage: `url('/CTA.jpeg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

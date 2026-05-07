@@ -7,7 +7,7 @@ const images = [
   { url: "/29.png", alt: "Exterior", span: "lg:col-span-2 lg:row-span-2" },
   { url: "/46.png", alt: "Living Room", span: "" },
   { url: "/50.png", alt: "Kitchen", span: "" },
-  { url: "/40.png", alt: "Bedroom", span: "" },
+  { url: "/bedroom-1.jpeg", alt: "Bedroom", span: "" },
   { url: "/26.png", alt: "Bathroom", span: "" },
 
   // View More batch 1
@@ -37,7 +37,7 @@ const images = [
   { url: "/25.png", alt: "Kitchen", span: "" },
   { url: "/27.png", alt: "Kitchen", span: "" },
   { url: "/38.png", alt: "Kitchen", span: "" },
-  { url: "/41.png", alt: "Bedroom 2", span: "" },
+  { url: "/bedroom-2.jpeg", alt: "Bedroom 2", span: "" },
 
   // View More batch 5
   { url: "/1.png", alt: "Bathroom", span: "" },
@@ -59,7 +59,6 @@ const images = [
   { url: "/39.png", alt: "Movie theater", span: "" },
   { url: "/31.png", alt: "Movie theater", span: "" },
   { url: "/6.png", alt: "Movie theater", span: "" },
-
 ];
 
 const INITIAL_COUNT = 5;
